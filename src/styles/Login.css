@@ -1,0 +1,19 @@
+.button {
+	height: 50px;
+	width: 150px;
+	border-radius: 20px;
+    text-align: center;
+	object-fit: cover;
+    margin-top: 100px;
+    background-color: coral;
+    
+}
+
+.lmj-plant-item {
+	margin: 10px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: capitalize;
+}
