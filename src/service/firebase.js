@@ -1,6 +1,6 @@
 //import firebase from "firebase/compat/app";
-import firebase from 'firebase/compat/app'
-require('firebase/compat/auth')
+import firebase from 'firebase/compat/app';
+require('firebase/compat/auth');
 //import 'firebase/auth';
 
 // Your web app's Firebase configuration
