@@ -1,21 +1,34 @@
-import '../styles/Banner.css'
-import logo from '../assets/logo.png'
+import React from 'react';
+import '../styles/Banner.css';
+import logo from '../assets/logo.png';
+import { auth } from '../service/firebase';
 //import Recommandation from './Recommandation'
-
-function Banner () {
+//const Home = ({ user }) => {
+const Banner =  ({ user }) => {
     const title = "Todo|app"
    
     return(
 
         /*<div className='lmj-banner'>{children}</div>*/
 
-        <div>
+        <div className="banner-bootom-line">
         <div className="lmj-banner">
-            <img src={logo} alt="la maison jungle" className='lmj-logo'/>
-            <h1 className='lmj-title'>
+            <img src={logo} alt="ToDo-App" className='lmj-logo'/>
+            <h2 className='lmj-title'>
                 {title}
-            </h1>
+            </h2>            
         </div>
+        <div className="lmj-user">
+                {user.displayName !== ""}  {
+                <div align="right">
+                <h4> <span></span>{user.displayName}</h4>
+                <img src={user.photoURL} alt="" height="50px" width="50px" /><p></p>
+                <button onClick={() => auth.signOut()}>Sign out</button>
+                </div>
+                } 
+                
+            </div>
+        
         
         </div>
         /*<Recommandation/>*/

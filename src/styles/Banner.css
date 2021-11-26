@@ -2,11 +2,17 @@
     color : rgb(7, 54, 30);
     text-align: left;
     padding: 32px;
-    border-bottom: solid 3px rgb(7, 60, 31);
-    display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 150px;
+}
+.banner-bootom-line {
+    border-bottom: solid 3px rgb(5, 4, 39);
+    
 }
 
 .lmj-title{
@@ -16,4 +22,19 @@
 .lmj-logo{
     height: 45px;
     width: 45px;
+}
+
+.lmj-user {
+    color : rgb(5, 4, 39);
+    text-align: right;
+    padding: 10px;
+    padding-top: 0%;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items:right;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 150px;
+  
 }

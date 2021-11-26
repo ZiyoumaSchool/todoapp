@@ -5,8 +5,8 @@ import store from './lib/redux';
 
 import InboxScreen from './components/InboxScreen';
 import Banner from './components/Banner';
-import Login from './components/Login';
-import Home from './components/Home';
+import Login from './pages/Login';
+import Home from './pages/Home';
 import './index.css';
 import firebase from './service/firebase';
 
@@ -24,15 +24,19 @@ function App(){
 
   return (
   <div className="app">
-    <Banner/>
+    
     {user ? 
     <div>
-    <Home user={user} /> 
+    <Banner user={user}/>
+    <Home/> 
     <Provider store={store}>
     <InboxScreen />      
     </Provider>
     </div>
-    : <Login/>
+      
+    : <div>
+          <Login/>
+      </div>
     }
     
   </div>
