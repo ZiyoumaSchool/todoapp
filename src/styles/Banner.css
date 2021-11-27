@@ -38,3 +38,16 @@
     height: 150px;
   
 }
+
+.nav-banner{
+    text-align: right;
+    padding: 10px;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items:right;
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: 30px;
+
+}

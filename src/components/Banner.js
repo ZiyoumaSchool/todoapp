@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Banner.css';
 import logo from '../assets/logo.png';
 import { auth } from '../service/firebase';
@@ -18,7 +19,9 @@ const Banner =  ({ user }) => {
                 {title}
             </h2>            
         </div>
+        
         <div className="lmj-user">
+                              
                 {user.displayName !== ""}  {
                 <div align="right">
                 <h4> <span></span>{user.displayName}</h4>
@@ -27,7 +30,11 @@ const Banner =  ({ user }) => {
                 </div>
                 } 
                 
-            </div>
+        </div>
+        <nav className="nav-banner">
+                    <Link to="/">Accueil &nbsp;&nbsp;</Link>
+                    <Link to="/taskpage">List Tasks</Link>
+        </nav>
         
         
         </div>
