@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Banner.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import logo from '../assets/logo.png';
 import { auth } from '../service/firebase';
 //import Recommandation from './Recommandation'
@@ -24,16 +25,17 @@ const Banner =  ({ user }) => {
                               
                 {user.displayName !== ""}  {
                 <div align="right">
-                <h4> <span></span>{user.displayName}</h4>
-                <img src={user.photoURL} alt="" height="50px" width="50px" /><p></p>
-                <button onClick={() => auth.signOut()}>Sign out</button>
+                <img className="rounded-circle z-depth-2" alt="100x100" src={user.photoURL} alt="" height="50px" width="50px" /><p></p>                
+                <span className="text-primary"><h4> <span></span>{user.displayName}</h4></span>
                 </div>
                 } 
                 
         </div>
         <nav className="nav-banner">
-                    <Link to="/">Accueil &nbsp;&nbsp;</Link>
-                    <Link to="/taskpage">List Tasks</Link>
+                    <Link to="/" className="btn btn-outline-primary">Accueil </Link>&nbsp;&nbsp;
+                    <Link to="/taskpage" className="btn btn-outline-primary ">List Tasks</Link> &nbsp;&nbsp;
+                    <button className="btn btn-outline-dark" onClick={() => auth.signOut()}>Sign out</button>
+                    <br/><br/>
         </nav>
         
         

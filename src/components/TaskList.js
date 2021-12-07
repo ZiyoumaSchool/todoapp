@@ -53,6 +53,7 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
         ...tasks.filter(t => t.state === 'TASK_PINNED'),
         ...tasks.filter(t => t.state !== 'TASK_PINNED'),
     ];
+   /// console.log(tasksInOrder)
 
     return (
         <div className = "list--items">
@@ -67,7 +68,14 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
       /** Checks if it's in loading state */
       loading: PropTypes.bool,
       /** The list of tasks */
-      tasks: PropTypes.arrayOf(Task.propTypes.task).isRequired,
+      tasks: PropTypes.arrayOf(PropTypes.shape({
+        /** Id of the task */
+        id: PropTypes.number.isRequired,
+        /** Title of the task */
+        title: PropTypes.string.isRequired,
+        /** Current state of the task */
+        state: PropTypes.string.isRequired,
+      }) ).isRequired,
       /** Event to change the task to pinned */
       onPinTask: PropTypes.func,
       /** Event to change the task to archived */
@@ -77,7 +85,7 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
       loading: false,
      };
 
-     export default connect(
+    export default connect(
         ({ tasks }) => ({
           tasks: tasks.filter(t => t.state === 'TASK_INBOX' || t.state === 'TASK_PINNED'),
         }),
@@ -86,3 +94,5 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
           onPinTask: id => dispatch(pinTask(id)),
         })
       )(PureTaskList);
+
+     // export default PureTaskList

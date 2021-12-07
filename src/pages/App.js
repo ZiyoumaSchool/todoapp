@@ -7,7 +7,7 @@ import InboxScreen from '../components/InboxScreen';
 import Banner from '../components/Banner';
 import Login from './Login';
 import Home from './Home';
-import '../index.css';
+//import './index00';
 import firebase from '../service/firebase';
 
 
