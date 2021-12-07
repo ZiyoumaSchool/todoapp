@@ -127,7 +127,7 @@ const defaultTasks = [
 console.log("default 1====>",defaultTasks1)
 
 
-/*console.log(  db.collection("tasks").get().then((querySnapshot) => {
+console.log(  db.collection("tasks").get().then((querySnapshot) => {
   let list=[]
     // Loop through the data and store
     // it in array to display
@@ -144,7 +144,7 @@ console.log("default 1====>",defaultTasks1)
     console.log("result bd-default1>",defaultTasks1)
     
 })
-)*/
+)
 
 
 
