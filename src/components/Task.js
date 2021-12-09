@@ -36,7 +36,7 @@ export default function Task({task : { id, title, state }, onArchiveTask, onPinT
     /** Composition of the task */
     task: PropTypes.shape({
       /** Id of the task */
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       /** Title of the task */
       title: PropTypes.string.isRequired,
       /** Current state of the task */

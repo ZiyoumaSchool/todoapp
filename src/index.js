@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import './index.css';
-import App from './App';
+import App from './pages/App';
+import TaskPage from './pages/TaskPage';
+//import Home from './pages/Home';
+//import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+    <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/taskpage" element={<TaskPage />} />  
+    </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
