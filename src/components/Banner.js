@@ -26,7 +26,8 @@ const Banner =  ({ user }) => {
                 {user.displayName !== ""}  {
                 <div align="right">
                 <img className="rounded-circle z-depth-2" alt="100x100" src={user.photoURL} alt="" height="50px" width="50px" /><p></p>                
-                <span className="text-primary"><h4> <span></span>{user.displayName}</h4></span>
+                <span className="text-primary"><h4> <span></span>{user.displayName}</h4></span><br/>
+                <button className="btn btn-outline-dark" onClick={() => auth.signOut()}>Sign out</button>
                 </div>
                 } 
                 
@@ -34,7 +35,7 @@ const Banner =  ({ user }) => {
         <nav className="nav-banner">
                     <Link to="/" className="btn btn-outline-primary">Accueil </Link>&nbsp;&nbsp;
                     <Link to="/taskpage" className="btn btn-outline-primary ">List Tasks</Link> &nbsp;&nbsp;
-                    <button className="btn btn-outline-dark" onClick={() => auth.signOut()}>Sign out</button>
+                    
                     <br/><br/>
         </nav>
         
