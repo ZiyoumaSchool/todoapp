@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './lib/redux';
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,6 +17,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <Router>
     <Routes>
           <Route path="/" element={<AddTask />} />
@@ -22,6 +25,7 @@ ReactDOM.render(
           <Route path="/addtask" element={<AddTask />} />  
     </Routes>
     </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -23,11 +23,12 @@ function TaskPage (){
         <div>
         {user ? 
     <div>
+    {/* <Provider store={store}> */}
     <Banner user={user}/>
     <p>LISTE DES TACHES</p>
-    <Provider store={store}>
+    
     <InboxScreen />      
-    </Provider>
+    {/* </Provider> */}
     </div>
       
     : <div>

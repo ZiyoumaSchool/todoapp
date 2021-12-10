@@ -29,9 +29,9 @@ function App(){
               <div>
               <Banner user={user}/>
               <Home/> 
-              <Provider store={store}>
+              {/* <Provider store={store}> */}
               <InboxScreen />      
-              </Provider>
+              {/* </Provider> */}
               </div>
       
     : <div>

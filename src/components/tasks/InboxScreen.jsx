@@ -31,7 +31,9 @@ return (
     </div>
 );
 
-}PureInboxScreen.propTypes = {
+}
+
+PureInboxScreen.propTypes = {
     /** The error message */
     error: PropTypes.string,
 };

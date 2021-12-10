@@ -103,9 +103,9 @@ const AddTask = () => {
   </div>
 
 
-    <Provider store={store}>
+    {/*<Provider store={store}>*/}
     <InboxScreen />      
-    </Provider>
+     {/*</Provider>*/}
     </div>
       
     : <div>
