@@ -1,0 +1,37 @@
+.add-task-1 {
+    color : rgb(7, 54, 30);
+    text-align: left;
+    padding: 32px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 150px;
+}
+.add-task-2 {
+    color : rgb(7, 54, 30);
+    text-align: right;
+    padding: 32px;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 150px;
+}
+
+.add-task-3 {
+    color : rgb(7, 54, 30);
+    text-align: left;
+    padding: 32px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    height: 150px;
+}

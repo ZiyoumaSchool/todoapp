@@ -8,6 +8,7 @@ import {
 import './index.css';
 import App from './pages/App';
 import TaskPage from './pages/TaskPage';
+import AddTask from './components/tasks/AddTask';
 //import Home from './pages/Home';
 //import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
@@ -16,8 +17,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
     <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<AddTask />} />
           <Route path="/taskpage" element={<TaskPage />} />  
+          <Route path="/addtask" element={<AddTask />} />  
     </Routes>
     </Router>
   </React.StrictMode>,

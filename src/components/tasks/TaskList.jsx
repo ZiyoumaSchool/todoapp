@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Task from './Task';
-import { archiveTask, pinTask } from '../lib/redux';
+import { archiveTask, pinTask } from '../../lib/redux';
 
 import PropTypes from 'prop-types';
 
@@ -55,10 +55,15 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
     ];
    /// console.log(tasksInOrder)
 
+  
+   //const nbTasks = 0;
+
+
     return (
         <div className = "list--items">
             {tasksInOrder.map(task => (
-                    <Task key={task.id} task = {task} {...events} />
+                   
+                    <Task key={task.id} task = {task} {...events}/>
             ))}
         </div>
     );

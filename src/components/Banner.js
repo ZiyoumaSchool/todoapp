@@ -14,12 +14,16 @@ const Banner =  ({ user }) => {
         /*<div className='lmj-banner'>{children}</div>*/
 
         <div className="banner-bootom-line">
-        <div className="lmj-banner">
+       <Link to="/">
+        <div className="lmj-banner">        
             <img src={logo} alt="ToDo-App" className='lmj-logo'/>
+        
             <h2 className='lmj-title'>
                 {title}
-            </h2>            
+            </h2>  
+                  
         </div>
+        </Link>
         
         <div className="lmj-user">
                               
@@ -33,8 +37,14 @@ const Banner =  ({ user }) => {
                 
         </div>
         <nav className="nav-banner">
+                    {/*
                     <Link to="/" className="btn btn-outline-primary">Accueil </Link>&nbsp;&nbsp;
-                    <Link to="/taskpage" className="btn btn-outline-primary ">List Tasks</Link> &nbsp;&nbsp;
+                    <Link to="/addtask" className="btn btn-outline-primary ">Add Task</Link>&nbsp;&nbsp;
+                    */}
+                    <Link to="/taskpage" className="btn btn-outline-primary ">Tasks List</Link>&nbsp;&nbsp;
+                    
+                    
+                    
                     
                     <br/><br/>
         </nav>

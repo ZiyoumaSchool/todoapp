@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import store from '../lib/redux';
 
-import InboxScreen from '../components/InboxScreen';
+import InboxScreen from '../components/tasks/InboxScreen';
 import Banner from '../components/Banner';
 import Login from './Login';
 //import Home from './Home';
